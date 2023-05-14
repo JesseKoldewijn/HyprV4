@@ -186,7 +186,7 @@ fi
 #### Check for package manager ####
 if [ ! -f /sbin/paru ]; then  
     echo -en "$CNT - Configuering paru."
-    git clone https://aur.archlinux.org/paru.git &>> $INSTLOG
+    git clone https://aur.archlinux.org/paru-bin.git &>> $INSTLOG
     cd paru
     makepkg -si --noconfirm --skipreview &>> ../$INSTLOG &
     show_progress $!
